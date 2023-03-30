@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="/static/styles.css">
+
+        <title>CareConnect</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <i class="ri-empathize-fill nav__logo-icon"></i> CareConnect
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#diagnose" class="nav__link">Diagnosis</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#plans" class="nav__link">Plans</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#faqs" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#tracker" class="nav__link">Track</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">DocNearby</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="login.html" class="nav__link login__button">Login/Signup</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="/static/img/home.png" alt="" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Personal Healthcare, <br> Simplified.
+                        </h1>
+                        <p class="home__description">
+                            <b>Empower yourself with knowledge about your health</b><br>
+                            Our website offers a wealth of information to help you stay informed and make informed decisions
+                        </p>
+                        <a href="#about" class="button button--flex">
+                            About us <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Follow Us</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img src="/static/img/about.png" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            <br>Why CareConnect?
+                        </h2>
+
+                        <p class="about__description">
+                            We have developed a high level of trust and reliability among our customers as it provides them with a regular treatment plan and their necessary metric trackers.
+                        </p>
+
+                        <div class="about__details">
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                We ensure transperency which makes our portal reliable
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                To ensure a successful treatment, we direct you to contact the nearby doctors
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                We make sure that the medical information is protected.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                We offer a user-friendly interface with comprehensive range of 
+                                healthcare services
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- =================DIAGNOSE==================== -->
+            <section class="diagnose" id="diagnose">
+                <div class="diagnose__title">
+                    <h1 class="diagnose__title">Diagnosis Zone</h1>
+                </div>
+
+                <div class="l-form">
+                    <form method="post" action="/predict" class="form">
+                        <table class="table">
+
+        <tr>
+            <td><label class="table__text" for="age"></label></td>
+            <td><input type="text" class="table__input" name="age" id="age" class="common" placeholder="Age"></td>
+          </tr>
+
+          <tr>
+            <td><label class="table__text" for="bp"></label></td>
+            <td><input type="text" class="table__input" name="bp" id="bp" class="common" placeholder="Blood Pressure"></td>
+          </tr>
+
+          <tr>
+            <td><label class="table__text" for="sg"></label></td>
+            <td><input type="text" class="table__input" name="sg" id="sg" class="common" placeholder="Specific gravity"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="al"></label> </label></td>
+            <td><input type="text" class="table__input" name="al" id="al" class="common" placeholder="Albumin"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="su"></label></td>
+            <td><input type="text" class="table__input" name="su" id="su" class="common" placeholder="Sugar (yes or no)"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="rbc"></label></td>
+            <td><input type="text" class="table__input" name="rbc" id="rbc" class="common" placeholder="Red blood cells (normal or abnormal)"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="pc"></label></td>
+            <td><input type="text" class="table__input" name="pc" id="pc" class="common" placeholder="Pus cells (normal or abnormal)"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="pcc"></label></td>
+            <td><input type="text" class="table__input" name="pcc" id="pcc" class="common" placeholder="Pus cell clumps (present or notpresent)"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="ba"></label></td>
+            <td><input type="text" class="table__input" name="ba" id="ba" class="common" placeholder="Bacteria (present or notpresent)"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="bgr"></label></td>
+            <td><input type="text" class="table__input" name="bgr" id="bgr" class="common" placeholder="Blood-glucose (random)"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="bu"></label></td>
+            <td><input type="text" class="table__input" name="bu" id="bu" class="common" placeholder="Blood Urea"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="sc"></label></td>
+            <td><input type="text" class="table__input" name="sc" id="sc" class="common" placeholder="Serum Creatinine"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="sod"></label></td>
+            <td><input type="text" class="table__input" name="sod" id="sod" class="common" placeholder="Sodium"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="pot"></label></td>
+            <td><input type="text" class="table__input" name="pot" id="pot" class="common" placeholder="Potasium"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="hemo"></label></td>
+            <td><input type="text" class="table__input" name="hemo" id="hemo" class="common" placeholder="Haemoglobin"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="pcv"></label></td>
+            <td><input type="text" class="table__input" name="pcv" id="pcv" placeholder="Packed cell volume"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="wc"></label></td>
+            <td><input type="text" class="table__input" name="wc" id="wc" placeholder="White blood cell count"></td>
+          </tr>
+          <tr>
+            <td><label class="table__text" for="rc"></label></td>
+            <td><input type="text" class="table__input" name="rc" id="rc" placeholder="Red blood cell count"></td>
+          </tr>
+
+                        </table>
+
+
+                        <input type="submit" class="form__button" value="Submit" onclick="displayOutput()">
+                    </form>
+                </div>
+            </section>
+
+            <section id="output">
+                <h1 class="post__diagnosis">Result of Diagnosis:</h1>
+                <p class="output__field">
+                    {{ prediction }}
+                </p>
+            </section>
+
+            <script>
+                function displayOutput(){
+                    const input = document.getElementById("input-field").value;
+                    const output = document.getElementById("output-field");
+                    output.innerHTML = input;
+                }
+            </script>
+            
+            
+
+<!-- <section class="project section">
+    <div class="plan__container bd-grid">
+        <div class="plan__data">
+            <h2 class="section-title plan__title">Do you have a project in mind?</h2>
+            <p class="plan__description">I am constantly looking for opportunties to exhibit and hone my skills. Do contact me with suggestions, guidance and collaborations.</p>
+            <a href="#contactme" class="button plan__button">Contact Me</a>   
+        </div>
+
+        <img src="/static/img/memojithink.png" alt="" class="plan__img">
+    </div>
+
+</section> -->
+ 
+        <div >
+            <h3 class="plans__title" id="plans">Here are some of CC's Curated Plans:</h3>
+            <div class="container-card">
+                <div class="card">
+                    <div class="card__border">
+                        <img src="/static/img/cc-logo.png" alt="card image" class="card__img">
+                    </div>
+    
+                    <h3 class="card__name">CC Complete Wellness Kit</h3>
+                    <span class="card__profession">Includes a set of nutrition plans, well curated meal ideas, beginner friendly workouts to meet basic health needs. Suitable for anyone to get a kickstart on their journey of better wellness.</span>
+                    <div class="card__social" id="card-social">
+                        <div class="card__social-control">
+                            <div class="card__social-toggle" id="card-toggle">
+                                <i class="ri-add-line"></i>
+                            </div>
+    
+                            <span class="card__social-text">More Information</span>
+    
+                            <ul class="card__social-list">
+                                <a href="" target= "_blank" class="card__social-link">
+                                    <i class="ri-file-download-line"></i>
+                                </a>
+                                <a href="" target= "_blank" class="card__social-link">
+                                    <i class="ri-file-download-line"></i>
+                                </a>
+                                
+                            </ul>
+                        </div>
+    
+                    </div>
+                </div>
+    
+            </div>
+            <div class="container-card">
+                <div class="card">
+                    <div class="card__border">
+                        <img src="/static/img/cc-logo.png" alt="card image" class="card__img">
+                    </div>
+    
+                    <h3 class="card__name">CC Custom Guide Kit</h3>
+                    <span class="card__profession">Suitable for people who have a detoriating kidney health, includes a guide full of nutritional and healthy meals to keep parameters like Creatinine in check. Also includes a set of exercise options.</span>
+                    <div class="card__social" id="card-social2">
+                        <div class="card__social-control">
+                            <div class="card__social-toggle" id="card-toggle2">
+                                <i class="ri-add-line"></i>
+                            </div>
+    
+                            <span class="card__social-text">More Information</span>
+    
+                            <ul class="card__social-list">
+                                <a href="" target= "_blank" class="card__social-link">
+                                    <i class="ri-file-download-line"></i>
+                                </a>
+                                <a href="" target= "_blank" class="card__social-link">
+                                    <i class="ri-file-download-line"></i>
+                                </a>
+                                
+                            </ul>
+                        </div>
+    
+                    </div>
+                </div>
+    
+            </div>
+     
+        </div>
+         
+
+            <!--==================== STEPS ====================-->
+            <section class="steps section container" id="plans">
+                <div class="steps__bg">
+                    <h2 class="section__title-center steps__title">
+                        The Personalized Health Care Plan satisfies<br>the following three requirements
+                    </h2>
+
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">01</div>
+                            <h3 class="steps__card-title">Comprehensive Coverage</h3>
+                            <p class="steps__card-description">
+                                Provides coverage for a wide range of medical services including
+                                preventive care
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">02</div>
+                            <h3 class="steps__card-title">Cost-Effectiveness</h3>
+                            <p class="steps__card-description">
+                                Porvides tools and resources to help users estimate their total 
+                                costs and make informed decisions about their healthcare coverage
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">03</div>
+                            <h3 class="steps__card-title">User-Friendly Interface</h3>
+                            <p class="steps__card-description">
+                                Makes it easier for the users to access as it provides
+                                clear and concise information
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+
+            
+
+
+           
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    Frequently Asked Questions
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What are the symptoms of a specific medical condition?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    For CKD, it can have a range of symptoms that vary depending on the severity of the condition. Some common symptoms include: Fatigue and weakness, Swelling in the hands, feet, or ankles, Shortness of breath.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do I manage a chronic condition?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                Managing a chronic condition involves working closely with healthcare professionals to develop a comprehensive plan. Here are some key steps:<br>
+1. Follow your healthcare provider's instructions for taking medication and making lifestyle changes.<br>
+2. Maintain a healthy lifestyle by eating a balanced diet, getting regular exercise, and managing stress.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What is the best diet for managing a particular health condition?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    The best diet for managing a particular health condition varies depending on the specific condition and individual circumstances. It's important to consult with a healthcare professional or registered dietitian to develop an individualized diet plan based on your specific health condition and dietary needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What are the risk factors for a specific disease or condition?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Diabetes<br>High blood pressure<br>Family history of kidney disease<br>Age 60 or older<br>Cardiovascular disease<br>Obesity
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do I prepare for a medical procedure?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Follow your healthcare provider's instructions: Your healthcare provider will give you specific instructions to prepare for your procedure. Be sure to follow them carefully.<br>
+Fast or adjust your diet: If your procedure requires fasting, be sure to follow the fasting guidelines provided by your healthcare provider. If you need to adjust your diet, such as avoiding certain foods or beverages, be sure to follow those instructions as well.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do I prevent a particular health condition?
+                                    
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Maintain a healthy diet, Exercise regularly, Practice good hygiene, Manage stress, Avoid smoking and excessive alcohol consumption.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== TRACKER ====================-->
+            
+            <!--==================== TRACKER ====================-->
+
+            <h2 class="tracker__title " id="tracker"></h2>
+            <div class="tracker_div">
+                <div class="progress-bar-container">
+                  <div class="progress-bar"></div>
+                  <div class="button-container">
+                    <button class="prog_button" id="decrement-btn">-</button>
+                    <button class="prog_button" id="increment-btn">+</button>
+                  </div>
+                  <h1 class="pr_text">Water intake</h1>
+                  <p class="pr_small_text">
+                    8 Glasses per day
+                  </p>
+                </div>
+                <div class="progress-bar-container">
+                  <div class="progress-bar" id="progressbar2"></div>
+                  <div class="button-container">
+                    <button class="prog_button" id="decrement-btn2">-</button>
+                    <button class="prog_button" id="increment-btn2">+</button>
+                  </div>
+                  <h1 class="pr_text">Exercise</h1>
+                  <p class="pr_small_text">
+                    Atleast 1 hour daily
+                  </p>
+                </div>
+                <div class="progress-bar-container">
+                  <div class="progress-bar" id="progressbar3"></div>
+                  <div class="button-container">
+                    <button class="prog_button" id="decrement-btn3">-</button>
+                    <button class="prog_button" id="increment-btn3">+</button>
+                  </div>
+                  <h1 class="pr_text">Nutrition</h1>
+                  <p class="pr_small_text">
+                    Track Vitamins, Minerals here
+                  </p>
+                </div>
+            </div>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="contact">
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            Schedule a<br>consultation now<br>in your area
+                        </h2>
+
+                        <div class="contact__data">
+                            <img src="/static/img/maps_preview.png" alt="" class="map__embed">
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <div class="contact__content">
+                                <input type="email" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Email</label>
+                            </div>
+
+                            <div class="contact__content">
+                                <input type="text" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Appointment Query</label>
+                            </div>
+
+                            <div class="contact__content contact__area">
+                                <textarea name="message" placeholder=" " class="contact__input"></textarea>
+                                <label for="" class="contact__label">Message</label>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex">
+                            Find Doctors
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <i class="ri-empathize-fill footer__logo-icon"></i> CareConnect
+                    </a>
+
+                    <!-- <h3 class="footer__title">
+                        Subscribe to our newsletter <br> to stay update
+                    </h3> -->
+
+                    <div class="footer__subscribe">
+                        <input type="email" placeholder="Enter your email" class="footer__input">
+
+                        <button class="button button--flex footer__button">
+                            Subscribe
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">+999 888 777</li>
+
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <!-- <p class="footer__copy">Designed and Developed by team Code-Crew</p> -->
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="/static/js/scrollreveal.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="/static/js/main.js"></script>
+    </body>
+</html>

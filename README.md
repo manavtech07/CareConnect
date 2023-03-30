@@ -1,13 +1,13 @@
 ## CareConnect CKD Portal
 Kidney Disease Predictive Analysis Tool
 
-#Our Goals:
+OUR GOALS:
 To determine if a patient is likely to be diagnosed with chronic kidney disease (CKD) or not, we created a machine learning model with a 99.7% accuracy rate, based on easily available parameters from accessible sources such as blood test reports.
 We have created a website for our CareConnect portal that has a user-friendly interface and tracks patient data. The User Interface elements for diagnosis reports, basic tracker, features, contact forms, navigation bar are ready to use.
 A UI component that enables patients to get in touch with medical professionals in their area has been implemented.
 The portal is completely responsive and embedded with our machine learning model in the backend at this stage.
 
-#Implementation:
+IMPLEMENTATION:
 1. User authentication and authorization for secure login and access control.
 2. Database integration to store user data, reports, and appointments.
 3. Data visualization to display user past reports and current stage in an understandable format.
@@ -22,7 +22,8 @@ The portal is completely responsive and embedded with our machine learning model
 
 <img width="1272" alt="Screenshot 2023-03-29 at 8 03 13 AM" src="https://user-images.githubusercontent.com/87480105/228730419-b21a958a-0c2a-479b-9cfb-85bcae018d96.png">
 
-#Mobile version:
+MOBILE VERSION:
+
 <img width="340" alt="Screenshot 2023-03-29 at 7 55 30 AM" src="https://user-images.githubusercontent.com/87480105/228730465-1b81651d-96cb-4f50-abe0-2f12ea60041f.png">
 
 <img width="329" alt="Screenshot 2023-03-29 at 7 55 59 AM" src="https://user-images.githubusercontent.com/87480105/228730508-5e252d28-4408-47c5-8328-a422cdd80380.png">
